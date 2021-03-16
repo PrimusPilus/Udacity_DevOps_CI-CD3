@@ -1,10 +1,5 @@
 version: 2.1
 
-workflows:
-  test-env-vars:
-    jobs:
-      - build
-
 jobs:
   build:
     docker:
@@ -14,4 +9,9 @@ jobs:
       - run:
           name: "echo an env var that is part of our project"
           command: |
-            echo MY_ENV_VAR
+            echo $MY_ENV_VAR
+
+workflows:
+  test-env-vars:
+    jobs:
+      - build
