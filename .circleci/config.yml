@@ -11,9 +11,8 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
-              --stack-name loustack1
+              --stack-name my-stack
 workflows:
   my_workflow:
     jobs:
       - create_infrastructure
-      
