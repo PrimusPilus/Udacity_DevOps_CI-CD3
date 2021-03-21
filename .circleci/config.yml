@@ -12,6 +12,7 @@ jobs:
             aws cloudformation deploy \
               --template-file template.yml \
               --stack-name lou-stack
+              
 workflows:
   my_workflow:
     jobs:
