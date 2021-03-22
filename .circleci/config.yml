@@ -10,9 +10,8 @@ jobs:
           name: Ensure backend infrastructure exist
           command: |
             aws cloudformation deploy \
-              --template-file .circleci/files/template.yml \              
+              --template-file template.yml \
               --stack-name loustack
-              
 workflows:
   my_workflow:
     jobs:
