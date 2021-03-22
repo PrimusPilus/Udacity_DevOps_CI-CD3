@@ -12,6 +12,7 @@ jobs:
             aws cloudformation deploy \
               --template-file .circleci/files/template.yml \
               --stack-name loustack
+              
 workflows:
   my_workflow:
     jobs:
